@@ -1,5 +1,8 @@
 # DroneHunt
 
+Drone Hunt derived from Duck Hunt, laser tag, and skeet. The idea behind it all is to have a sensor-equipped, medium-sized, lightweight, and agile quadcopter flying autonomously while players target and shoot the drone with modified IR guns for a high score under adjustable time and boundary constraints. The onboard sensors will send real-time scores and statistics to the server hosted by a BeagleBone Black running the game engine and UI on a M.E.A.N stack inside a custom-built ground control station.
+<hr/>
+
 Steps to build this:
 
 <h3>1. Make 'data' folder in root and set dbpath inside data/:</h3>
