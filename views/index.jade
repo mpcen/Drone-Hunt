@@ -1,0 +1,26 @@
+include mixins
+html( lang="en" )
+	head
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+		link( rel='stylesheet', href='/stylesheets/style.css' )
+		title Drone Hunt
+		meta( charset='utf-8' )
+		meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+		meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+		meta( name='description', content='Drone Hunt Game Engine' )
+		link(href="/stylesheets/bootstrap.css", rel="stylesheet")
+
+		body(style="padding-bottom:10rem;")
+			block content
+				.container: .row
+					#loader.bubblingG
+						img(src='/images/sax.gif', style='height: 100%; width: 100%')
+					#overlay
+					center
+						#page-content
+						.row
+							.col-md-12.col-sm-12
+								+panel("Main Menu", "primary") <center>Welcome to Drone Hunt.</center><br><center>Press the START button to begin hunting!</center>
+						.row
+							#button.btn.btn-primary START
+				script(src='/javascripts/loading.js')

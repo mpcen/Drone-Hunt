@@ -1,0 +1,68 @@
+include mixins
+html( lang="en" )
+    head
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+        link( rel='stylesheet', href='/stylesheets/style.css' )
+        
+        title Drone Hunt
+        
+        meta( charset='utf-8' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        meta( name='description', content='Drone Hunt Game Engine' )
+        //- Bootswatch Theme
+        link(href="/stylesheets/bootstrap.css", rel="stylesheet")
+
+        body(style="padding-bottom:10rem;")
+            body(onload='initialize()')
+
+        block content
+            .container: .row 
+                .panel.panel-primary
+                    .panel-heading
+                        center Game Settings
+                    .panel-body
+                        .col-xs-12
+                            .alert.alert-danger.hide#alert(role='alert')
+                                span.glyphicon.glyphicon-exclamation-sign
+                                span.sr-only Error
+
+                            form.login-form(method='post', role='form', action='/stats')
+                                .col-xs-9.col-xs-offset-3
+                                    .col-xs-6
+                                        .form-group
+                                            label.control-label
+                                                | Number of players
+                                            .radio
+                                                label
+                                                    input#numPlayers2(type='radio', name='num_players', value='2')
+                                                    | 2 Players
+                                
+                                    .col-xs-6
+                                        #game_time.form-group
+                                            label.control-label
+                                                | Round Length    
+                                            .radio
+                                                label
+                                                    input#time_1(type='radio', name='game_time', value='60')
+                                                    | 1 Minute
+                                            .radio
+                                                label
+                                                    input#time_3(type='radio', name='game_time', value='180')
+                                                    | 3 Minutes
+                                            .radio
+                                                label
+                                                    input#time_5(type='radio', name='game_time', value='300')
+                                                    | 5 Minutes
+                                .form-group(style='margin-top:20px')
+                                    .col-xs-9.col-xs-offset-3
+                                        .form-group
+                                            .col-md-1
+                                                div#map-canvas
+                                .row: .form-group.col-xs-6.col-xs-offset-5(style="margin-top:20px;")
+                                    button(type="reset", class=["btn", "btn-default"]) RESET
+                                    button(type="submit", class=["btn", "btn-primary"]) START!
+
+            
+            script(src='/javascripts/map.js')
+            script(src='https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing')

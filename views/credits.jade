@@ -1,0 +1,85 @@
+include mixins
+html( lang="en" )
+    head
+        script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+        link( rel='stylesheet', href='/stylesheets/style.css' )
+        title Drone Hunt
+        meta( charset='utf-8' )
+        meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+        meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+        meta( name='description', content='Drone Hunt Game Engine' )
+        //- Bootswatch Theme
+        link(href="/stylesheets/bootstrap.css", rel="stylesheet")
+
+        body(style="padding-bottom:10rem;")
+        .container: .row
+            .panel.panel-primary
+                .panel-heading
+                    h3.panel-title Credits
+                .panel-body
+                    .container.marketing
+                        .row
+                            img.img-circle(src='http://www.pinaldave.com/bimg/ilovesamples.jpg', width='200', height='200')
+                            h2 Emmanuel Martinez
+                            p Major: Computer Engineering
+                            p Project Role: Built and programmed the quadcopter, game engine, and UI.
+                            p
+                              | Emmanuel has accepted an offer with The Boeing Company in Seattle, WA as an application developer.
+                            p
+                              a.btn.btn-primary(role='button', href='mailto:martinez@knights.ucf.edu') Contact »
+                            br
+                            br
+                            br
+                        .row
+                            img(src='/images/randy.jpg', width='200', height='300')
+                            h2 Randy Aybar
+                            p Major: Computer Engineering
+                            p
+                              | Project Role: Designed and programmed the network required for the guns and drone to communicate with the game engine.
+                            p
+                              | Randy has accepted an offer with Cisco Systems in San Jose, CA as a network engineer.
+                            p
+                              a.btn.btn-primary(role='button', href='mailto:raybar@knights.ucf.edu') Contact »
+                            br
+                            br
+                            br
+                        .row
+                            img(src='/images/juammy.jpg', width='200', height='300')
+                            h2 Juammy Lora
+                            p Major: Computer Engineering
+                            p
+                              | Project Role: Designed and built the Ground Control Station and assisted with gun modifications
+                            p
+                              | Juammy has accepted an offer with Lockheed Martin in Orlando, FL as a systems engineer.
+                            p
+                              a.btn.btn-primary(role='button', href='mailto:juammylora@knights.ucf.edu') Contact »
+                            br
+                            br
+                            br
+                        .row
+                            img(src='/images/devesh.jpg', width='200', height='300')
+                            h2 Devesh Maharaj
+                            p Major: Electrical Engineering
+                            p
+                              | Project Role: Designed electrical systems and programmed the guns to work with the game engine.
+                            p Devesh is currently seeking an entry-level electrical engineering position.
+                            p
+                              a.btn.btn-primary(role='button', href='mailto:devesh640@knights.ucf.edu') Contact »
+                            br
+                            br
+                            br
+                          h2
+                            | A Special Thanks To:
+                            br
+                        .row
+                            img(src='/images/james.jpg', width='200', height='300')
+                            h2 James Choi
+                            p Major: Computer Engineering
+                            p Project Role: Mentor and source for game engine and UI aspects.
+
+                            br
+                            
+                        .row
+                            .col-md-2.col-sm-2.col-md-offset-5.col-sm-offset-5
+                                span#button_newgame.btn.btn-primary(style='display:inline;') PLAY AGIAN
+            script(src='/javascripts/credits.js')

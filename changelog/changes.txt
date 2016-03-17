@@ -1,0 +1,8 @@
+Changes made:
+
+-- Map.js
+- Set coords to Student Union (UCF) if GPS is not fixed
+- Changed k, D variable names to lat and lon for better interpretation
+- Added home coords to the postdata (to send to database)
+- Fixed scores not clearing after each game
+- 

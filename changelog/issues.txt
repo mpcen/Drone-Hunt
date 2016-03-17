@@ -1,0 +1,6 @@
+minor issues:
+
+- Map doesn't stay fixed
+- Delay too long with sax guy
+- Sax image out of aspect ratio
+- both players are shown in 1 player mode

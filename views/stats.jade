@@ -1,0 +1,45 @@
+include mixins
+html( lang="en" )
+	head
+		script(src='http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js')
+		link( rel='stylesheet', href='/stylesheets/style.css' )
+		title Drone Hunt
+		meta( charset='utf-8' )
+		meta( http-equiv='X-UA-Compatible', content='IE=edge' )
+		meta( name='viewport', content='width=device-width, initial-scale=1.0' )
+		meta( name='description', content='Drone Hunt Game Engine' )
+		//- Bootswatch Theme
+		link(href="/stylesheets/bootstrap.css", rel="stylesheet")
+
+		body(style="padding-bottom:10rem;")
+		.container: .row
+			.panel.panel-primary
+				.panel-heading
+					center
+						h3.panel-title Current Score
+				.panel-body
+					center
+						h3#time_remaining(style='display:inline;') Time Remaining
+						div(class='timer')
+					#scores
+						table.table.table-striped.table-hover
+							thead
+								tr
+									th
+									th Score
+									th Shots Fired
+									th Accuracy
+							tbody
+								tr.danger
+									td Player 1
+									td#p1_score
+									td#p1_shots_fired
+									td#p1_accuracy
+							tbody
+								tr.success
+									td Player 2
+									td#p2_score
+									td#p2_shots_fired
+									td#p2_accuracy
+		script(src='/javascripts/stats.js')
+		script(src='/javascripts/countdown.js')
